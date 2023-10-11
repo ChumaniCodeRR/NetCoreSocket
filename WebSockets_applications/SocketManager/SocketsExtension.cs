@@ -16,6 +16,7 @@ namespace WebSockets_applications.SocketManager
             }
 
             return services;
+
         }
 
         public static IApplicationBuilder MapSockets(this IApplicationBuilder app, PathString path,
