@@ -21,7 +21,7 @@ namespace ReadingConsole_Websocket
         public static async Task StartWebsockets()
         {
             var client = new ClientWebSocket();
-            await client.ConnectAsync(new Uri("ws://localhost:7246/ws"), CancellationToken.None);
+            await client.ConnectAsync(new Uri("ws://localhost:5186/ws"), CancellationToken.None);
 
             Console.WriteLine($"web socket connection established @ {DateTime.UtcNow}"); 
 

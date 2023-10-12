@@ -21,7 +21,7 @@ namespace WebSockets_applications.SocketManager
                 return;
 
             var socket = await context.WebSockets.AcceptWebSocketAsync();
-
+            await Handler.OnConnection(socket);
             await Receive(socket, async (result, buffer) =>
             {
                 if (result.MessageType == WebSocketMessageType.Text)
